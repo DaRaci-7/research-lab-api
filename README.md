@@ -58,3 +58,107 @@
 ## ***Ejemplo: ¿Qué puerto utiliza HTTPS por defecto?***
 
 ### HTTPS utiliza por defecto el puerto 443. Este es el puerto estándar para conexiones seguras en la web
+
+# 3. Códigos de estado de respuesta HTTP
+
+## ***Investiga qué son los status codes y para qué sirven.***
+
+### Los status codes son mensajes de tres cifras que un servidor web envía a un cliente (como tu navegador) para indicar el resultado de una solicitud, informando si fue exitosa, si hubo un error o si se necesita alguna otra acción. 
+
+## ***Crea una tabla organizada por categoría:***
+
+### 1: Informativo (1XX)
+
+| Código de estado | Función | 
+|:----------:|:----------:|
+| 100    | Continúa en   | 
+| 101    | Protocolos de conmutación   | 
+| 102    | Procesando  | 
+| 103    | Primeras pistas   | 
+
+### 2: Éxito (2XX)
+
+| Código de estado | Descripción               |
+|:----------:|:----------:|
+| 200     | OK                        |
+| 201     | Creado                    |
+| 202     | Aceptado                  |
+| 203     | Información no autorizada |
+| 204     | Sin contenido             |
+| 205     | Restablecer contenido     |
+| 206     | Contenido parcial         |
+| 207     | Multiestado               |
+| 208     | Ya comunicado             |
+| 226     | IM Utilizado              |
+
+### 3: Redirección (3XX)
+
+| Código de estado | Función | 
+|:----------:|:----------:|
+| 300     | Varias opciones             |
+| 301     | Movido permanentemente      |
+| 302     | Encontrado                  |
+| 303     | Ver otros                   |
+| 304     | No modificado               |
+| 307     | Redireccionamiento temporal |
+| 308     | Redireccionamiento permanente |
+
+
+### 4: Error de cliente (4XX)
+
+| Código de estado | Función | 
+|:----------:|:----------:|
+| 400     | Bad request                                                      |
+| 401     | No autorizado                                                    |
+| 402     | Pago requerido                                                   |
+| 403     | Prohibido                                                        |
+| 404     | No se ha encontrado                                              |
+| 405     | Método no permitido                                              |
+| 406     | No aceptable                                                     |
+| 407     | Se requiere autenticación proxy                                  |
+| 408     | Tiempo de espera de la solicitud                                 |
+| 409     | Conflicto                                                        |
+| 410     | Gone                                                             |
+| 411     | Longitud requerida                                               |
+| 412     | Condición previa fallida                                         |
+| 413     | Contenido demasiado grande                                       |
+| 414     | URI demasiado largo                                              |
+| 415     | Tipo de soporte no compatible                                    |
+| 416     | Alcance no satisfactorio                                         |
+| 417     | Expectativa fallida                                              |
+| 421     | Petición mal dirigida                                            |
+| 422     | Contenido no procesable                                          |
+| 423     | Bloqueado                                                        |
+| 424     | Dependencia fallida                                              |
+| 425     | Demasiado pronto                                                 |
+| 426     | Actualización necesaria                                          |
+| 428     | Condición previa requerida                                       |
+| 429     | Demasiadas peticiones                                            |
+| 431     | Los campos de la cabecera de la solicitud son demasiado grandes  |
+| 451     | No disponible por motivos legales                                |
+
+
+### 5: Error del servidor (5XX)
+
+| Código de estado | Función | 
+|:----------:|:----------:|
+| 500     | Error interno del servidor               |
+| 501     | No aplicado                              |
+| 502     | Bad gateway                              |
+| 503     | Servicio no disponible                   |
+| 504     | Tiempo de espera de la puerta de enlace  |
+| 505     | Versión HTTP no admitida                 |
+| 506     | Variante también negociada               |
+| 507     | Almacenamiento insuficiente              |
+| 508     | Bucle detectado                          |
+| 511     | Autenticación de red necesaria           |
+
+
+## - Luego, profundiza **por qué debemos conocer y reconocer especialmente estos tres códigos:**
+    - `200 OK` → cuando todo sale bien.
+    - `404 Not Found` → cuando el recurso no existe o fue movido.
+    - `500 Internal Server Error` → cuando el problema está en el servidor.
+
+> 💬 Explica con tus palabras cómo podrías usar estos códigos para diagnosticar errores en una API o en un proyecto web.
+>
+### La importancia de conocer bien estos codigos es que nos entregan informacion basica que debemos manejar si estamos trabajando en la reparacion de una pg web, si obtenemos un codigo 200 como respuesta todo esta funcionando correctamente por lo que en teoria no deberiamos modificar nada, si obtenemos el codigo 404 podemos pensar primero que la url esta mal escrita, en caso de que este bien escrita podemos pensar que no hay nada en el servidor y que eliminaron la pg y por eso no obtenemos una respuesta, finalmente si obtenemos el codigo 500 significa que el servidor podria estar caido.
