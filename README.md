@@ -162,3 +162,36 @@
 > 💬 Explica con tus palabras cómo podrías usar estos códigos para diagnosticar errores en una API o en un proyecto web.
 >
 ### La importancia de conocer bien estos codigos es que nos entregan informacion basica que debemos manejar si estamos trabajando en la reparacion de una pg web, si obtenemos un codigo 200 como respuesta todo esta funcionando correctamente por lo que en teoria no deberiamos modificar nada, si obtenemos el codigo 404 podemos pensar primero que la url esta mal escrita, en caso de que este bien escrita podemos pensar que no hay nada en el servidor y que eliminaron la pg y por eso no obtenemos una respuesta, finalmente si obtenemos el codigo 500 significa que el servidor podria estar caido.
+
+# 4. Métodos HTTP
+
+## ***Investiga los principales métodos HTTP utilizados en APIs RESTful:***
+
+## 1- GET
+
+### Este metodo http solicita datos de un recurso del servidor.
+### Se usa en operaciones que necesitan obtener información, listar o consultar recursos.
+### Ejemplo: https://www.ejemplo.com/about es una solicitud GET, pero no incluye parámetros de consulta
+### Ejemplo 2: https://www.ejemplo.com/productos?categoria=electrónica&orden=precio. 
+En este formato, los datos se adjuntan a la URL después de un signo de interrogación (?\), donde cada par de nombre-valor se separa por un signo igual (=\) y los parámetros se separan entre sí con un ampersand (&\). 
+
+## 2- POST
+
+### Envía datos al servidor para crear un nuevo recurso.
+### Se usa para crear nuevos registros o ejecutar acciones.
+### Ejemplo: 
+### https://www.dominioejemplo.com/cuentas para crear un nuevo perfil,  https://www.dominioejemplo.com/cuentas/123/detalles para agregar información a un perfil específico.
+
+## 3- PUT
+
+### Actualiza completamente un recurso existente.
+### Se usa para reemplazar los datos completos de un recurso.
+### Ejemplo: 
+### Un ejemplo de una URL para una petición PUT en una API RESTful es https://api.ejemplo.com/v1/productos/{id}, donde PUT se utiliza para actualizar un recurso específico con su id. La URL completa sería similar a https://api.ejemplo.com/v1/productos/123, donde 123 es el identificador único del producto que se está actualizando. 
+
+## 4- DELETE
+
+### Elimina un recurso del servidor.
+### Se usa para borrar elementos o registros específicos
+### Ejemplo: 
+### Un ejemplo de URL con el método DELETE es https://example.com/posts/123, donde se le indica al servidor que elimine la publicación con el ID 123. En la práctica, esto se implementa enviando una solicitud HTTP DELETE a la URL del recurso que se desea eliminar. 
